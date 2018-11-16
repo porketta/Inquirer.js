@@ -1,6 +1,6 @@
 {
-  "name": "inquirer",
-  "version": "6.2.0",
+  "name": "@porketta.io/inquirer",
+  "version": "6.2.0-beta.2",
   "description": "A collection of common interactive command line user interfaces.",
   "author": "Simon Boudrias <admin@simonboudrias.com>",
   "files": [
@@ -30,11 +30,7 @@
     "sinon": "^5.0.0"
   },
   "scripts": {
-    "test": "nyc mocha test/**/* -r ./test/before",
-    "posttest": "nyc report --reporter=text-lcov > ../../coverage/nyc-report.lcov",
-    "prepublish": "nsp check",
-    "prepublishOnly": "cp ../../README.md .",
-    "postpublish": "rm -f README.md"
+    "test": "nyc mocha test/**/* -r ./test/before"
   },
   "repository": "SBoudrias/Inquirer.js",
   "license": "MIT",

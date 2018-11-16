@@ -54,7 +54,15 @@ class UI {
     // Close the readline
     this.rl.output.end();
     this.rl.pause();
-    this.rl.close();
+
+    if (/^win/i.test(process.platform)) {
+      // @see https://github.com/nodejs/node/issues/21771
+      // rl.close() breaks the event loop in @porketta.io/porcli
+    }
+    else {
+      this.rl.close();
+    }
+
   }
 }
 
